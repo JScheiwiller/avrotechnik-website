@@ -1,0 +1,13 @@
+.flexcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.maintext {
+    font-size: 10em;
+}
+
+.imagesize {
+    width: 500;
+    height: 500;
+}

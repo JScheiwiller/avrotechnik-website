@@ -39,6 +39,10 @@ module.exports = function (_env, argv) {
             "css-loader"
           ]
         },
+        // {
+        //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        //   type: 'asset/resource',
+        // },
         {
           test: /\.(png|jpg|gif)$/i,
           use: {
@@ -95,7 +99,6 @@ module.exports = function (_env, argv) {
       contentBase: path.join(__dirname, 'dist'),
       compress: true,
       historyApiFallback: true,
-      open: true,
       overlay: true
     }
   };
