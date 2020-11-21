@@ -16,7 +16,7 @@ module.exports = function (_env, argv) {
       path: path.resolve(__dirname, "dist"),
       // filename: "assets/js/[name].[contenthash:8].js",
       // publicPath: "/"
-      filename: "bundle.js",
+      filename: "bundle.[hash:8].js",
     },
     module: {
       rules: [
@@ -43,6 +43,21 @@ module.exports = function (_env, argv) {
         //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
         //   type: 'asset/resource',
         // },
+        // {
+        //   test: /\.svg$/,
+        //   use: [
+        //     {
+        //       loader: 'svg-url-loader',
+        //       options: {
+        //         limit: 10000,
+        //       },
+        //     },
+        //   ],
+        // },
+        {
+          test: /\.svg$/,
+          use: ["@svgr/webpack"]
+        },
         {
           test: /\.(png|jpg|gif)$/i,
           use: {
@@ -70,8 +85,7 @@ module.exports = function (_env, argv) {
         )
       }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "public/index.html"),
-        inject: true
+        template: path.resolve(__dirname, "src/index.html"),
       })
     ].filter(Boolean),
     optimization: {

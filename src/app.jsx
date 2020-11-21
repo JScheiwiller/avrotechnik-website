@@ -1,16 +1,15 @@
 import React from 'react';
-import wheel from './assets/images/wheel.jpg';
-import weld from './assets/images/weld.jpg';
-import sew from './assets/images/sew.jpg';
+import wheel from './assets/images/wheel.png';
+import weld from './assets/images/weld.png';
+import sew from './assets/images/sew.png';
 
-const ImageHolder = ({ src }) => 
-  // <img className='image mainitem' height='900' width='400' src={src}></img>
+const ImageHolder = ({ src }) =>
   <img className='image mainitem' src={src}></img>
 
 const images = [wheel, weld, sew];
 
 const App = () =>
-  <div>
+  <div className='root'>
     <header className='flexcontainer'>
       <span>Avrotechnik</span>
       <span>Connect</span>
@@ -24,9 +23,6 @@ const App = () =>
     <footer>
       <div className='left'>details</div>
     </footer>
-    <div className='tfmd'/>
   </div>
-  
-
 
 export default App;
