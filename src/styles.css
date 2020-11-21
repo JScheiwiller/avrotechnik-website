@@ -4,10 +4,47 @@
 }
 
 .maintext {
-    font-size: 10em;
+    width: 28%;
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+    font-family: 'GothamHTF-Book';
+    font-size: 4vw;
+    font-weight: 700;
+    /* font-family: 'Gotham HTF'; */
+    font-style: normal;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: 4vw;
 }
 
-.imagesize {
-    width: 500;
-    height: 500;
+.image {
+    margin-top: 5rem;
+    object-fit: cover;
+    width: 20%;
+    height: auto;
+    max-height: 900px;
+    max-width: 400px;
+}
+
+.mainitem {
+    margin-left: .2rem;
+    margin-right: .2rem;
+}
+
+.tfmd {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background: rgba(0, 0, 0, 0.05); */
+    background: blue;
+    width: 100px;
+    height: 200px;
+    z-index: 100;
+    /* transform: matrix(1, 0, calc(-1*var(--s,0deg)), 1, 0, 0); */
+    transform: skewX(calc(-1*var(--s,0deg)));;
+}
+
+
+.root {
+    background: #E5E5E5;
 }
