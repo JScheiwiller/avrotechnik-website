@@ -1,4 +1,4 @@
-.flexcontainer {
+.horiflex {
     display: flex;
     justify-content: space-between;
 }
@@ -6,9 +6,7 @@
 .maintext {
     width: 28%;
     min-width: 28%;
-    margin-top: 20rem;
-    margin-bottom: 20rem;
-    margin-left: 4vw;
+    margin: auto;
     font-family: 'GothamHTF-Book';
     font-size: 4vw;
     font-weight: 700;
@@ -21,7 +19,6 @@
     margin-top: 3rem;
     object-fit: cover;
     width: 22%;
-    height: auto;
 }
 
 .mainitem {
@@ -33,6 +30,11 @@
     background-image: url(./assets/images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 body {

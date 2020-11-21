@@ -10,18 +10,18 @@ const images = [wheel, weld, sew];
 
 const App = () =>
   <div className='root'>
-    <header className='flexcontainer'>
+    <header className='horiflex'>
       <span>Avrotechnik</span>
       <span>Connect</span>
     </header>
-    <div className='flexcontainer'>
+    <div className='horiflex'>
       <div className='maintext'>
         Come fly the friendly skies, but better.
       </div>
       {images.map(e => <ImageHolder key={e} src={e}/>)}
     </div>
     <footer>
-      <div className='left'>details</div>
+      <div>details</div>
     </footer>
   </div>
 
