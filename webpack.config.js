@@ -14,8 +14,6 @@ module.exports = function (_env, argv) {
     entry: "./src/index.js",
     output: {
       path: path.resolve(__dirname, "dist"),
-      // filename: "assets/js/[name].[contenthash:8].js",
-      // publicPath: "/"
       filename: "bundle.[hash:8].js",
     },
     module: {
@@ -39,27 +37,8 @@ module.exports = function (_env, argv) {
             "css-loader"
           ]
         },
-        // {
-        //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        //   type: 'asset/resource',
-        // },
-        // {
-        //   test: /\.svg$/,
-        //   use: [
-        //     {
-        //       loader: 'svg-url-loader',
-        //       options: {
-        //         limit: 10000,
-        //       },
-        //     },
-        //   ],
-        // },
         {
-          test: /\.svg$/,
-          use: ["@svgr/webpack"]
-        },
-        {
-          test: /\.(png|jpg|gif)$/i,
+          test: /\.(png|jpg|gif|svg)$/i,
           use: {
             loader: "url-loader",
             options: {

@@ -1,29 +1,86 @@
-.horiflex {
+.rowflex {
     display: flex;
     justify-content: space-between;
+}
+
+.responsiveflex {
+    flex-direction: row;
 }
 
 .maintext {
     width: 28%;
     min-width: 28%;
     margin: auto;
+    margin-left: 2vw;
     font-family: 'GothamHTF-Book';
-    font-size: 4vw;
-    font-weight: 700;
-    font-style: normal;
     letter-spacing: -0.02em;
     text-align: left;
 }
 
+.bigtext {
+    font-size: 4vw;
+    font-weight: 700;
+}
+
+.smalltext {
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 150%;
+    color: grey;
+}
+
 .image {
-    margin-top: 3rem;
+    width: 100%;
+    max-width: 100%;
     object-fit: cover;
-    width: 22%;
+    filter: brightness(80%);
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.imagecontent {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+
+.marker {
+    width: 4vw;
+    height: 4px;
+    margin-bottom: 10px;
+    background: #A79966;
+}
+
+.imagetext {
+    font-family: 'GothamHTF-Book';
+    font-weight: 700;
+    font-size: 1.7vw;
+    line-height: 2vw;
+    color: white;
+    text-shadow: 2px 2px 2px black;
 }
 
 .mainitem {
+    width: 22%;
     margin-left: .4rem;
     margin-right: .4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainitem:hover .image {
+    transform: scale(1.05);
+}
+
+.arrow {
+    width: 2vw;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.mainitem:hover .arrow {
+    transform: translateX(10px);
+    opacity: 100;
 }
 
 .root {
@@ -40,3 +97,67 @@
 body {
     margin: 0
 }
+
+.logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.logotext {
+    margin-left: 50px;
+    color: grey;
+    font-weight: 700;
+    font-family: 'GothamHTF-Book';
+}
+
+.connectcontainer {
+    font-family: 'GothamHTF-Book';
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #586698;
+    margin-top: 30px;
+    margin-right: 30px;
+    height: fit-content;
+    white-space: nowrap;
+}
+
+.ctcntext {
+    margin-right: 10px;
+}
+
+.ctcnimg {
+    vertical-align: middle;
+    /* The svgs have a small blank space on top */
+    padding-bottom: .1em;
+}
+
+.contactimg {
+    height: 0.7em;
+    margin-right: 30px;
+}
+
+.connectimg {
+    height: 0.85em;
+}
+
+.footertext {
+    font-family: 'GothamHTF-Book';
+    font-size: 15px;
+    line-height: 24px;
+    color: #757575;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsiveflex {
+        flex-direction: column;
+    }
+  }
