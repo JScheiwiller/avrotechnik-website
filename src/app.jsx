@@ -2,6 +2,7 @@ import React from 'react';
 
 import Logo from './logo';
 import ImageHolder from './imageholder';
+import Linked from './linked';
 
 // Image files
 import wheel from './assets/images/wheel.png';
@@ -9,6 +10,7 @@ import weld from './assets/images/weld.png';
 import sew from './assets/images/sew.png';
 import contact from './assets/svgs/contact.svg';
 import connect from './assets/svgs/connect.svg';
+import mapPin from './assets/svgs/map-pin.svg';
 
 const images = [
     { src: wheel, txt: ['Components &', 'Landing Gear'] },
@@ -23,13 +25,13 @@ const App = () =>
             <div className='rowflex connectcontainer'>
                 <div style={{ cursor: 'pointer' }}>
                     <span className='ctcntext'>Contact</span>
-                    <img src={contact} className='ctcnimg contactimg' />
+                    <img src={contact} className='svgs contactimg' />
                 </div>
                 <div
                     onClick={() => window.open('https://www.linkedin.com/company/avrotechnik-aviation-services-ltd')}
                     style={{ cursor: 'pointer' }}>
                     <span className='ctcntext'>Connect</span>
-                    <img src={connect} className='ctcnimg connectimg' />
+                    <img src={connect} className='svgs connectimg' />
                 </div>
             </div>
         </header>
@@ -41,11 +43,11 @@ const App = () =>
             {images.map(({ src, txt }, i) => <ImageHolder key={i} src={src} txt={txt} />)}
         </div>
         <footer>
-            <div className='footertext'>
+            <Linked classNames='footertext' link='https://goo.gl/maps/eHgm9AxtLYn6N8if6'>
                 <div>© 2020 AvroTechnik.</div>
-                <div>150 Palmer Rd NE</div>
-                <div>Calgary, AB, T2E 7R3</div>
-            </div>
+                <div className='blueunderline'>150 Palmer Rd NE</div>
+                <span className='blueunderline'>Calgary, AB, T2E 7R3</span><img src={mapPin} className='svg map-pin'/>
+            </Linked>
         </footer>
     </div>
 
